@@ -9,12 +9,17 @@ module.exports = {
   target: 'node',
   mode: 'development',
   watch: true,
+  context: appRoot,
   entry: path.join(appRoot, 'src', 'index.js'),
   output: {
     filename: 'index.js',
     path: path.join(appRoot, 'build')
   },
   externals: [nodeExternals()],
+  node: {
+    __filename: true,
+    __dirname: true
+  },
   module: {
     rules: [
       {
