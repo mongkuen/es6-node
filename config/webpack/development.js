@@ -37,5 +37,10 @@ module.exports = {
       bracketSpacing: true,
       jsxBracketSameLine: true
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      "src": path.join(appRoot, 'src'),
+    }
+  }
 }
